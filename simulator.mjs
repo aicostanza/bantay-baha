@@ -1,3 +1,0 @@
-// A real IoT deployment replaces this script with a microcontroller and ultrasonic sensor using Wi-Fi or MQTT.
-const url=(process.argv[2]||'http://localhost:3000').replace(/\/$/,'');let level=84.5;
-async function send(){level=Math.max(0,Math.min(500,level+(Math.random()-.48)*6));const reading={sensorId:'CREEK-01',waterLevelCm:+level.toFixed(1),timestamp:new Date().toISOString()};try{const r=await fetch(url+'/api/readings',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(reading),signal:AbortSignal.timeout(4500)});if(!r.ok)throw Error(`HTTP ${r.status}`);console.log(r.status,reading);}catch(e){console.error('Reading failed:',e.message)}}await send();setInterval(send,5000);

@@ -22,9 +22,9 @@
 - Done: analytics and threshold logic
 - Done: server-side AI integration and rule-based fallback
 - Done: README and reflection draft
-- Doing: cloud deployment and verification
+- Done: original Sites deployment; To Do: deploy Python edition
 - To Do: supply Gemini key and verify a real AI response
-- To Do: public GitHub repository and public submission URL
+- Done: public GitHub repository; To Do: Python deployment URL
 - To Do: record a demonstration of two minutes or less
 
 ## SDLC
