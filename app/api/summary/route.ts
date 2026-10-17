@@ -1,0 +1,1 @@
+import {getDb} from '@/db';import {readings} from '@/db/schema';import {summarize} from '@/lib/flood';export async function GET(){return Response.json(summarize(await getDb().select().from(readings)));}
